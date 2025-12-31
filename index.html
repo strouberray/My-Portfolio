@@ -1,410 +1,410 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="light">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Kyle Castellano</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Public+Sans:wght@300;500;700&display=swap');
+    <!DOCTYPE html>
+    <html lang="en" data-theme="light">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio | Kyle Castellano</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Public+Sans:wght@300;500;700&display=swap');
 
-        :root {
-            --bg: #FDFBF7; 
-            --text: #3E4A3D; 
-            --accent: #8FA989; 
-            --secondary: #D4A373; 
-            --card-bg: #FFFFFF;
-            --nav-bg: rgba(253, 251, 247, 0.9);
-            --border: #E0DCD0;
-            --btn-text: #FDFBF7;
-        }
+            :root {
+                --bg: #FDFBF7; 
+                --text: #3E4A3D; 
+                --accent: #8FA989; 
+                --secondary: #D4A373; 
+                --card-bg: #FFFFFF;
+                --nav-bg: rgba(253, 251, 247, 0.9);
+                --border: #E0DCD0;
+                --btn-text: #FDFBF7;
+            }
 
-        [data-theme="dark"] {
-            --bg: #222C21; 
-            --text: #F1F3F0; 
-            --accent: #AEC3AE;
-            --secondary: #E9C46A;
-            --card-bg: #2B362A;
-            --nav-bg: rgba(34, 44, 33, 0.95);
-            --border: #3E4A3D;
-        }
+            [data-theme="dark"] {
+                --bg: #222C21; 
+                --text: #F1F3F0; 
+                --accent: #AEC3AE;
+                --secondary: #E9C46A;
+                --card-bg: #2B362A;
+                --nav-bg: rgba(34, 44, 33, 0.95);
+                --border: #3E4A3D;
+            }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                scroll-behavior: smooth;
+            }
 
-        body {
-            font-family: 'Public Sans', sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
-            line-height: 1.7;
-            transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-        }
+            body {
+                font-family: 'Public Sans', sans-serif;
+                background-color: var(--bg);
+                color: var(--text);
+                line-height: 1.7;
+                transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            }
 
-        h1, h2, h3, .logo {
-            font-family: 'DM Serif Display', serif;
-            font-weight: 400;
-        }
+            h1, h2, h3, .logo {
+                font-family: 'DM Serif Display', serif;
+                font-weight: 400;
+            }
 
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.5rem 10%;
-            background: var(--nav-bg);
-            backdrop-filter: blur(8px);
-            border-bottom: 1px solid var(--border);
-            z-index: 1000;
-        }
+            nav {
+                position: fixed;
+                top: 0;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1.5rem 10%;
+                background: var(--nav-bg);
+                backdrop-filter: blur(8px);
+                border-bottom: 1px solid var(--border);
+                z-index: 1000;
+            }
 
-        .logo {
-            font-size: 1.8rem;
-            color: var(--accent);
-            letter-spacing: -1px;
-        }
+            .logo {
+                font-size: 1.8rem;
+                color: var(--accent);
+                letter-spacing: -1px;
+            }
 
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2.5rem;
-        }
+            .nav-links {
+                display: flex;
+                list-style: none;
+                gap: 2.5rem;
+            }
 
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text);
-            font-size: 0.9rem;
-            font-weight: 500;
-            opacity: 0.8;
-            transition: 0.3s;
-        }
+            .nav-links a {
+                text-decoration: none;
+                color: var(--text);
+                font-size: 0.9rem;
+                font-weight: 500;
+                opacity: 0.8;
+                transition: 0.3s;
+            }
 
-        .nav-links a:hover {
-            opacity: 1;
-            color: var(--accent);
-        }
+            .nav-links a:hover {
+                opacity: 1;
+                color: var(--accent);
+            }
 
-        #theme-toggle {
-            background: var(--accent);
-            border: none;
-            padding: 8px 16px;
-            cursor: pointer;
-            border-radius: 30px;
-            color: var(--btn-text);
-            font-size: 0.8rem;
-            font-weight: bold;
-        }
+            #theme-toggle {
+                background: var(--accent);
+                border: none;
+                padding: 8px 16px;
+                cursor: pointer;
+                border-radius: 30px;
+                color: var(--btn-text);
+                font-size: 0.8rem;
+                font-weight: bold;
+            }
 
-        section {
-            padding: 120px 10% 80px;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
+            section {
+                padding: 120px 10% 80px;
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
 
-        .hero-flex {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 40px;
-        }
+            .hero-flex {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 40px;
+            }
 
-        .hero-content { flex: 1; }
-        .hero-image { flex: 1; }
+            .hero-content { flex: 1; }
+            .hero-image { flex: 1; }
 
-        .hero-image img {
-            width: 100%;
-            max-width: 600px; 
-            height: auto;
-            border-radius: 4px;
-            border: 1px solid var(--border);
-            box-shadow: 12px 12px 0px var(--accent); 
-        }
+            .hero-image img {
+                width: 100%;
+                max-width: 600px; 
+                height: auto;
+                border-radius: 4px;
+                border: 1px solid var(--border);
+                box-shadow: 12px 12px 0px var(--accent); 
+            }
 
-        .hero h1 { 
-            font-size: clamp(2.5rem, 5vw, 4rem); 
-            line-height: 1.1; 
-            margin-bottom: 1.5rem;
-            color: var(--text);
-        }
+            .hero h1 { 
+                font-size: clamp(2.5rem, 5vw, 4rem); 
+                line-height: 1.1; 
+                margin-bottom: 1.5rem;
+                color: var(--text);
+            }
 
-        .highlight { color: var(--accent); font-style: italic; }
+            .highlight { color: var(--accent); font-style: italic; }
 
-        .tagline { 
-            font-size: 1.2rem; 
-            text-transform: uppercase; 
-            letter-spacing: 2px; 
-            margin-bottom: 1rem;
-            color: var(--secondary);
-        }
+            .tagline { 
+                font-size: 1.2rem; 
+                text-transform: uppercase; 
+                letter-spacing: 2px; 
+                margin-bottom: 1rem;
+                color: var(--secondary);
+            }
 
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2.5rem;
-        }
+            .grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+                gap: 2.5rem;
+            }
 
-        .card {
-            background: var(--card-bg);
-            padding: 2.5rem;
-            border-radius: 2px;
-            border: 1px solid var(--border);
-            box-shadow: 10px 10px 0px var(--border);
-            transition: 0.3s ease;
-        }
+            .card {
+                background: var(--card-bg);
+                padding: 2.5rem;
+                border-radius: 2px;
+                border: 1px solid var(--border);
+                box-shadow: 10px 10px 0px var(--border);
+                transition: 0.3s ease;
+            }
 
-        .card:hover {
-            transform: translate(-4px, -4px);
-            box-shadow: 14px 14px 0px var(--accent);
-        }
+            .card:hover {
+                transform: translate(-4px, -4px);
+                box-shadow: 14px 14px 0px var(--accent);
+            }
 
-        h2 { font-size: 3rem; margin-bottom: 3rem; color: var(--text); }
+            h2 { font-size: 3rem; margin-bottom: 3rem; color: var(--text); }
 
-        .skills-flex { display: flex; flex-wrap: wrap; gap: 12px; }
+            .skills-flex { display: flex; flex-wrap: wrap; gap: 12px; }
 
-        .skill-tag {
-            background: transparent;
-            color: var(--text);
-            padding: 6px 14px;
-            border-radius: 4px;
-            font-size: 0.85rem;
-            border: 1px solid var(--accent);
-        }
+            .skill-tag {
+                background: transparent;
+                color: var(--text);
+                padding: 6px 14px;
+                border-radius: 4px;
+                font-size: 0.85rem;
+                border: 1px solid var(--accent);
+            }
 
-        .btn {
-            background: var(--text);
-            color: var(--bg);
-            padding: 1.2rem 2.5rem;
-            border: none;
-            cursor: pointer;
-            font-size: 1rem;
-            font-family: 'DM Serif Display';
-            text-decoration: none;
-            display: inline-block;
-            transition: 0.3s;
-        }
+            .btn {
+                background: var(--text);
+                color: var(--bg);
+                padding: 1.2rem 2.5rem;
+                border: none;
+                cursor: pointer;
+                font-size: 1rem;
+                font-family: 'DM Serif Display';
+                text-decoration: none;
+                display: inline-block;
+                transition: 0.3s;
+            }
 
-        input, textarea {
-            width: 100%;
-            padding: 1rem;
-            margin-bottom: 1rem;
-            border: 1px solid var(--border);
-            background: var(--bg);
-            color: var(--text);
-            font-family: inherit;
-        }
+            input, textarea {
+                width: 100%;
+                padding: 1rem;
+                margin-bottom: 1rem;
+                border: 1px solid var(--border);
+                background: var(--bg);
+                color: var(--text);
+                font-family: inherit;
+            }
 
-        /* Song Card Layout */
-        .song-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
+            /* Song Card Layout */
+            .song-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 20px;
+                margin-top: 20px;
+            }
 
-        /* Large Social Icons Styling */
-        .social-icons {
-            display: flex;
-            gap: 1.8rem;
-            font-size: 2.2rem; /* Noticeably larger icons */
-            margin-top: 1.5rem;
-        }
+            /* Large Social Icons Styling */
+            .social-icons {
+                display: flex;
+                gap: 1.8rem;
+                font-size: 2.2rem; /* Noticeably larger icons */
+                margin-top: 1.5rem;
+            }
 
-        .social-icons a {
-            color: var(--text);
-            text-decoration: none;
-            transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
+            .social-icons a {
+                color: var(--text);
+                text-decoration: none;
+                transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            }
 
-        .social-icons a:hover {
-            color: var(--accent);
-            transform: scale(1.2) translateY(-5px); /* Pop and lift */
-        }
+            .social-icons a:hover {
+                color: var(--accent);
+                transform: scale(1.2) translateY(-5px); /* Pop and lift */
+            }
 
-        @media (max-width: 992px) {
-            .hero-flex { flex-direction: column; text-align: center; }
-            .nav-links { display: none; }
-            section { padding: 100px 5%; }
-            h2 { font-size: 2.2rem; }
-        }
-    </style>
-</head>
-<body>
+            @media (max-width: 992px) {
+                .hero-flex { flex-direction: column; text-align: center; }
+                .nav-links { display: none; }
+                section { padding: 100px 5%; }
+                h2 { font-size: 2.2rem; }
+            }
+        </style>
+    </head>
+    <body>
 
-    <nav>
-        <div class="logo">chiyong.</div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <button id="theme-toggle">🌙</button>
-    </nav>
+        <nav>
+            <div class="logo">chiyong.</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button id="theme-toggle">🌙</button>
+        </nav>
 
-    <section id="home">
-        <div class="hero-flex">
-            <div class="hero-content">
-                <p class="tagline">Hello, Friend.</p>
-                <h1>I'm <span class="highlight">Kyle Castellano.</span><br>A Digital Maker.</h1>
-                <p style="max-width: 500px; opacity: 0.8; font-size: 1.1rem; margin-bottom: 2rem;">
-                    Aspiring Web Developer & IT Student. I like soft colors, clean code, and solving problems in the simplest way possible.
-                </p>
-                <a href="#contact" class="btn">Say Hello</a>
-            </div>
-            
-            <div class="hero-image">
-                <img src="HIHI.jpg" alt="Kyle's Workspace">
-            </div>
-        </div>
-    </section>
-
-    <section id="about">
-        <h2>about me</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>EDUCATION</h3>
-                <p>Bachelor of Science in Information Technology at Eastern Visayas State University. 2024 - Present (2nd Year)</p>
-            </div>
-            <div class="card">
-                <h3>HOBBIES</h3>
-                <ul>
-                    <li>gaming</li>
-                    <li>sports</li>
-                    <li>listening to music (CLAIRO)</li>
-                    <li>hating on period cramps</li>
-                </ul>
-            </div>
-            
-            <div class="card" style="grid-column: 1 / -1;">
-                <h3>My fave songs</h3>
-                <div class="song-container">
-                    <iframe style="border-radius:12px" 
-                        src="https://open.spotify.com/embed/track/56NEihhw1BsIgBBzfvcE76" 
-                        width="100%" height="352" frameBorder="0" allowfullscreen="" 
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                        loading="lazy"></iframe>
-
-                    <iframe style="border-radius:12px" 
-                        src="https://open.spotify.com/embed/track/0HAqq2GcQKyi3s87GuN7jU" 
-                        width="100%" height="352" frameBorder="0" allowfullscreen="" 
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                        loading="lazy"></iframe>
-
-                    <iframe style="border-radius:12px" 
-                        src="https://open.spotify.com/embed/track/2Nq4SFbvYYZa8AF7lD7CWU" 
-                        width="100%" height="352" frameBorder="0" allowfullscreen="" 
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                        loading="lazy"></iframe>
+        <section id="home">
+            <div class="hero-flex">
+                <div class="hero-content">
+                    <p class="tagline">Hello, Friend.</p>
+                    <h1>I'm <span class="highlight">Kyle Castellano.</span><br>A Digital Maker.</h1>
+                    <p style="max-width: 500px; opacity: 0.8; font-size: 1.1rem; margin-bottom: 2rem;">
+                        Aspiring Web Developer & IT Student. I like soft colors, clean code, and solving problems in the simplest way possible.
+                    </p>
+                    <a href="#contact" class="btn">Say Hello</a>
+                </div>
+                
+                <div class="hero-image">
+                    <img src="HIHI.jpg" alt="Kyle's Workspace">
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="skills">
-        <h2>my toolkit</h2>
-        <div class="grid">
-            <div class="card">
-                <h3 style="margin-bottom: 1.5rem;">Development</h3>
-                <div class="skills-flex">
-                    <span class="skill-tag">CSS1</span>
-                    <span class="skill-tag">CSS2</span>
-                    <span class="skill-tag">CSS3</span>
-                    <span class="skill-tag">CSS4</span>
+        <section id="about">
+            <h2>about me</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>EDUCATION</h3>
+                    <p>Bachelor of Science in Information Technology at Eastern Visayas State University. 2024 - Present (2nd Year)</p>
+                </div>
+                <div class="card">
+                    <h3>HOBBIES</h3>
+                    <ul>
+                        <li>gaming</li>
+                        <li>sports</li>
+                        <li>listening to music (CLAIRO)</li>
+                        <li>hating on period cramps</li>
+                    </ul>
+                </div>
+                
+                <div class="card" style="grid-column: 1 / -1;">
+                    <h3>My fave songs</h3>
+                    <div class="song-container">
+                        <iframe style="border-radius:12px" 
+                            src="https://open.spotify.com/embed/track/56NEihhw1BsIgBBzfvcE76" 
+                            width="100%" height="352" frameBorder="0" allowfullscreen="" 
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                            loading="lazy"></iframe>
+
+                        <iframe style="border-radius:12px" 
+                            src="https://open.spotify.com/embed/track/0HAqq2GcQKyi3s87GuN7jU" 
+                            width="100%" height="352" frameBorder="0" allowfullscreen="" 
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                            loading="lazy"></iframe>
+
+                        <iframe style="border-radius:12px" 
+                            src="https://open.spotify.com/embed/track/2Nq4SFbvYYZa8AF7lD7CWU" 
+                            width="100%" height="352" frameBorder="0" allowfullscreen="" 
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                            loading="lazy"></iframe>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <h3 style="margin-bottom: 1.5rem;">Soft Skills</h3>
-                <div class="skills-flex">
-                    <span class="skill-tag">Communication</span>
-                    <span class="skill-tag">Problem Solving</span>
-                    <span class="skill-tag">Good Boy</span>
-                    <span class="skill-tag">Teamwork</span>
+        </section>
+
+        <section id="skills">
+            <h2>my toolkit</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3 style="margin-bottom: 1.5rem;">Development</h3>
+                    <div class="skills-flex">
+                        <span class="skill-tag">CSS1</span>
+                        <span class="skill-tag">CSS2</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">CSS4</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 style="margin-bottom: 1.5rem;">Soft Skills</h3>
+                    <div class="skills-flex">
+                        <span class="skill-tag">Communication</span>
+                        <span class="skill-tag">Problem Solving</span>
+                        <span class="skill-tag">Good Boy</span>
+                        <span class="skill-tag">Teamwork</span>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="projects">
-        <h2>selected work</h2>
-        <div class="grid">
-            <div class="card">
-                <div style="background: var(--accent); height: 200px; margin-bottom: 1.5rem; overflow: hidden;">
-                    <a href="https://drive.google.com/file/d/10N3foYVsSIL1JI-r0Fg0tIFL9l_HQode/view?usp=drive_link" target="_blank">
-                        <img src="g.png" alt="Short Film Project" style="width: 100%; height: 100%; object-fit: cover;">
-                    </a>
+        <section id="projects">
+            <h2>selected work</h2>
+            <div class="grid">
+                <div class="card">
+                    <div style="background: var(--accent); height: 200px; margin-bottom: 1.5rem; overflow: hidden;">
+                        <a href="https://drive.google.com/file/d/10N3foYVsSIL1JI-r0Fg0tIFL9l_HQode/view?usp=drive_link" target="_blank">
+                            <img src="g.png" alt="Short Film Project" style="width: 100%; height: 100%; object-fit: cover;">
+                        </a>
+                    </div>
+                    <h3>SHORT FILM</h3>
+                    <p>A simple video about pyramid scheme and awareness.</p>
+                    <p style="margin-top: 1rem; color: var(--secondary); font-size: 0.8rem; font-weight: bold;">IT ERA</p>
                 </div>
-                <h3>SHORT FILM</h3>
-                <p>A simple video about pyramid scheme and awareness.</p>
-                <p style="margin-top: 1rem; color: var(--secondary); font-size: 0.8rem; font-weight: bold;">IT ERA</p>
-            </div>
-            <div class="card">
-                <div style="background: var(--secondary); height: 200px; margin-bottom: 1.5rem; overflow: hidden;">
-                     <a href="https://kyledhandreb890.wixsite.com/my-site-8" target="_blank">
-                        <img src="CLAIRE.png" alt="Wix Portfolio" style="width: 100%; height: 100%; object-fit: cover;">
-                    </a>
-                </div>
-                <h3>WIX</h3>
-                <p>A simple website about me.</p>
-                <p style="margin-top: 1rem; color: var(--secondary); font-size: 0.8rem; font-weight: bold;">IT ERA</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2>let's chat</h2>
-        <div class="grid">
-            <form id="contactForm">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Tell me about your day..." rows="5" required></textarea>
-                <button type="submit" class="btn">Send Message</button>
-            </form>
-            <div style="padding: 1rem;">
-                <p>Feel free to reach out for collaborations or just to share a playlist.</p>
-                <br>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/martishinabol.si.pharsa/" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://twitter.com/yourprofile" target="_blank" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="https://github.com/strouberray" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://www.instagram.com/isrlygaf/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <div class="card">
+                    <div style="background: var(--secondary); height: 200px; margin-bottom: 1.5rem; overflow: hidden;">
+                        <a href="https://kyledhandreb890.wixsite.com/my-site-8" target="_blank">
+                            <img src="CLAIRE.png" alt="Wix Portfolio" style="width: 100%; height: 100%; object-fit: cover;">
+                        </a>
+                    </div>
+                    <h3>WIX</h3>
+                    <p>A simple website about me.</p>
+                    <p style="margin-top: 1rem; color: var(--secondary); font-size: 0.8rem; font-weight: bold;">IT ERA</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-   <script>
-        const themeToggle = document.getElementById('theme-toggle');
-        const htmlElement = document.documentElement;
+        <section id="contact">
+            <h2>let's chat</h2>
+            <div class="grid">
+                <form id="contactForm">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Tell me about your day..." rows="5" required></textarea>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+                <div style="padding: 1rem;">
+                    <p>Feel free to reach out for collaborations or just to share a playlist.</p>
+                    <br>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/martishinabol.si.pharsa/" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://twitter.com/yourprofile" target="_blank" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://github.com/strouberray" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.instagram.com/isrlygaf/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        function updateButton(theme) {
-            themeToggle.innerHTML = (theme === 'dark') ? "☀️" : "🌙";
-        }
+    <script>
+            const themeToggle = document.getElementById('theme-toggle');
+            const htmlElement = document.documentElement;
 
-        const currentTheme = localStorage.getItem('theme') || 'light';
-        htmlElement.setAttribute('data-theme', currentTheme);
-        updateButton(currentTheme);
+            function updateButton(theme) {
+                themeToggle.innerHTML = (theme === 'dark') ? "☀️" : "🌙";
+            }
 
-        themeToggle.addEventListener('click', () => {
-            const theme = htmlElement.getAttribute('data-theme');
-            const newTheme = (theme === 'light') ? 'dark' : 'light';
-            htmlElement.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-            updateButton(newTheme);
-        });
+            const currentTheme = localStorage.getItem('theme') || 'light';
+            htmlElement.setAttribute('data-theme', currentTheme);
+            updateButton(currentTheme);
 
-        document.getElementById('contactForm').addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Message Sent!');
-            e.target.reset();
-        });
-    </script>
-</body>
-</html>
+            themeToggle.addEventListener('click', () => {
+                const theme = htmlElement.getAttribute('data-theme');
+                const newTheme = (theme === 'light') ? 'dark' : 'light';
+                htmlElement.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+                updateButton(newTheme);
+            });
+
+            document.getElementById('contactForm').addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Message Sent!');
+                e.target.reset();
+            });
+        </script>
+    </body>
+    </html>
